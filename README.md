@@ -1,1 +1,1 @@
-# riskscope-ai
+riskscope-logo.png

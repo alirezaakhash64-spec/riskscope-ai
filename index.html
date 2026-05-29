@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RiskScope AI — Understand Crypto Risks Before You Invest</title>
+  <meta name="description" content="Beginner-friendly crypto risk explanations. No trading signals. No price predictions. Just clarity." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand"><div class="eye">◉</div><span>RiskScope <b>AI</b></span></div>
+    <a href="#pricing" class="nav-link">Pro</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-logo"><img src="assets/riskscope-logo.png" alt="RiskScope AI logo"></div>
+      <div class="badge">Risk education for crypto beginners</div>
+      <h1>Understand Crypto Risks Before You Invest</h1>
+      <p>Get simple risk explanations for cryptocurrencies. No trading signals. No price predictions. No hype.</p>
+
+      <div class="search-card">
+        <div class="free-count"><span id="remaining">5</span>/5 free analyses remaining</div>
+        <div class="search-row">
+          <input id="coinInput" placeholder="Search Bitcoin, Ethereum, Solana..." autocomplete="off" />
+          <button id="analyzeBtn">Analyze Risk</button>
+        </div>
+        <div class="chips" id="chips"></div>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden"></section>
+
+    <section id="paywall" class="paywall hidden">
+      <div class="lock">🔒</div>
+      <h2>Free Limit Reached</h2>
+      <p>You’ve used all 5 free crypto risk analyses.</p>
+      <div class="pro-box">
+        <h3>RiskScope Pro</h3>
+        <p class="price">$4.99/month</p>
+        <ul>
+          <li>Unlimited risk analyses</li>
+          <li>Coin comparison</li>
+          <li>Portfolio risk review</li>
+          <li>AI Crypto Coach</li>
+        </ul>
+        <button onclick="alert('Payment will be added after MVP testing.')">Upgrade to Pro</button>
+      </div>
+    </section>
+
+    <section class="examples">
+      <h2>Example Risk Explanations</h2>
+      <div class="cards">
+        <article class="mini-card"><span class="risk low">Low Risk</span><h3>Bitcoin</h3><p>Long market history, high liquidity, and strong adoption.</p></article>
+        <article class="mini-card"><span class="risk medium">Medium Risk</span><h3>Solana</h3><p>Fast-growing ecosystem with higher volatility than Bitcoin.</p></article>
+        <article class="mini-card"><span class="risk high">High Risk</span><h3>PEPE</h3><p>Meme-driven asset with strong dependence on social sentiment.</p></article>
+      </div>
+    </section>
+
+    <section class="trust">
+      <h2>Explain Risk, Not Profit</h2>
+      <div class="trust-grid">
+        <div><b>No buy/sell signals</b><p>RiskScope AI never tells users what to buy.</p></div>
+        <div><b>No price predictions</b><p>We focus on risk clarity, not future price guesses.</p></div>
+        <div><b>Beginner-first</b><p>Every explanation is simple, short, and easy to understand.</p></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-grid">
+        <div class="plan"><h3>Free</h3><p class="price">$0</p><ul><li>5 free analyses</li><li>Basic risk reports</li><li>Beginner notes</li></ul></div>
+        <div class="plan featured"><h3>Pro</h3><p class="price">$4.99/month</p><ul><li>Unlimited analyses</li><li>Portfolio risk check</li><li>Coin comparison</li><li>AI Crypto Coach</li></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><b>RiskScope AI</b> — Make crypto risk understandable for everyone.</p>
+    <p class="disclaimer">Educational information only. Not financial advice.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

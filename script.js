@@ -174,6 +174,15 @@ breakdown:{
     'Whale concentration',
     'Limited development activity'
   ]
+    ,
+
+breakdown:{
+  volatility:16,
+  liquidity:8,
+  adoption:5,
+  sentiment:18,
+  technology:4
+}
 },
   shiba:{name:'Shiba Inu',symbol:'SHIB',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Shiba Inu is heavily influenced by community hype and meme-coin market cycles.',why:['Meme coin','High volatility','Hype-driven','Limited fundamentals'],note:'Beginners should be careful with assets that depend strongly on social media excitement.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low','Liquidity':'Medium-High','Sentiment Dependency':'High'}},
   pepe:{
@@ -202,6 +211,15 @@ breakdown:{
     'Speculative demand',
     'Liquidity risk'
   ]
+    ,
+
+breakdown:{
+  volatility:20,
+  liquidity:6,
+  adoption:3,
+  sentiment:20,
+  technology:2
+}
 },
   floki:{name:'FLOKI',symbol:'FLOKI',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'FLOKI is a meme-related token with high dependence on community and trend cycles.',why:['Meme coin category','Trend-driven demand','High volatility','Uncertain long-term fundamentals'],note:'Beginners should understand that meme coins can rise and fall very quickly.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low-Medium','Liquidity':'Medium','Sentiment Dependency':'High'}},
   bonk:{name:'BONK',symbol:'BONK',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'BONK is a Solana ecosystem meme coin with high volatility and strong community-driven behavior.',why:['Meme coin','Solana ecosystem trend','High volatility','Sentiment-driven'],note:'BONK may be difficult for beginners because its value can depend heavily on market hype.',factors:{'Project Maturity':'Weak','Volatility':'Very High','Utility':'Low','Liquidity':'Medium','Sentiment Dependency':'High'}},

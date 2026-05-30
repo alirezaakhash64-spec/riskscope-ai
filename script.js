@@ -55,7 +55,33 @@ const data = {
     'Centralization risk'
   ]
 },
-  solana:{name:'Solana',symbol:'SOL',risk:'Medium Risk',cls:'medium',stars:'★★★★☆',summary:'Solana is a fast-growing blockchain with strong adoption, but it can be more volatile than Bitcoin or Ethereum.',why:['Active ecosystem','Fast growth','Higher volatility','Strong community interest'],note:'Solana can be beginner-friendly, but its price may move quickly during market stress.',factors:{'Project Maturity':'Good','Volatility':'Medium-High','Utility':'High','Liquidity':'High','Sentiment Dependency':'Medium'}},
+  solana:{
+  name:'Solana',
+  symbol:'SOL',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Solana offers fast transactions and strong ecosystem growth but faces network reliability concerns.',
+  why:[
+    'Rapid ecosystem growth',
+    'Strong developer activity',
+    'High transaction throughput',
+    'History of network outages'
+  ],
+  note:'Solana has strong growth potential but investors should monitor network stability and validator concentration.',
+  factors:{
+    'Project Maturity':'Strong',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Network outages',
+    'Validator concentration',
+    'Ecosystem dependency'
+  ]
+},
   avalanche:{name:'Avalanche',symbol:'AVAX',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Avalanche has real technology and ecosystem activity, but it competes in a crowded blockchain market.',why:['Useful blockchain platform','Competitive market','Growth depends on adoption','Moderate volatility'],note:'Beginners should understand that strong technology does not remove market risk.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
   toncoin:{name:'Toncoin',symbol:'TON',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Toncoin has strong attention due to its Telegram ecosystem connection, but it is still developing.',why:['Fast growth','Telegram ecosystem attention','Still maturing','Market sentiment influence'],note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'Medium-High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
   polygon:{name:'Polygon',symbol:'POL',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Polygon focuses on scaling Ethereum and has real utility, but faces strong competition.',why:['Ethereum scaling use case','Known ecosystem','High competition','Depends on network adoption'],note:'Polygon is easier to understand after learning the basics of Ethereum.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},

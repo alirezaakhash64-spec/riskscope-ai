@@ -25,7 +25,38 @@ const aliases={btc:'bitcoin',bitcoin:'bitcoin',eth:'ethereum',ethereum:'ethereum
 const input=document.getElementById('coinInput'), btn=document.getElementById('analyzeBtn'), result=document.getElementById('result'), paywall=document.getElementById('paywall'), remainingEl=document.getElementById('remaining');
 function used(){return Number(localStorage.getItem('rs_used')||0)}
 function updateRemaining(){remainingEl.textContent=Math.max(0,MAX_FREE-used())}
-function analyze(q){if(used()>=MAX_FREE){result.classList.add('hidden');paywall.classList.remove('hidden');paywall.scrollIntoView({behavior:'smooth'});return} const key=aliases[q.trim().toLowerCase()]; if(!key){result.classList.remove('hidden');result.innerHTML='<h2>Coin not found yet</h2><p>This MVP currently supports 20 popular cryptocurrencies. Try Bitcoin, Ethereum, Solana, PEPE, Dogecoin, XRP, Cardano, or Chainlink.</p>';return} localStorage.setItem('rs_used',used()+1); updateRemaining(); const c=data[key]; const score=c.risk.includes('High')?90:c.risk.includes('Medium')?55:20; result.classList.remove('hidden'); paywall.classList.add('hidden'); result.innerHTML=`<div class="analysis-head"><div><h2>${c.name} (${c.symbol})</h2><span class="risk ${c.cls}">${c.risk}</span><p><b>Risk Score:</b> <span style="color:${score>60?'#ef4444':score>30?'#f59e0b':'#22c55e'};font-weight:800">${score}/100</span></p></div><div><p>Beginner Friendly</p><div class="stars">${c.stars}</div></div></div><h3>Risk Summary</h3><p>${c.summary}</p><h3>Why?</h3><ul>${c.why.map(x=>`<li>${x}</li>`).join('')}</ul><h3>Risk Factors</h3><div class="factor-grid">${Object.entries(c.factors).map(([k,v])=>`<div class="factor"><span>${k}</span><b>${v}</b></div>`).join('')}</div><h3>Beginner Note</h3><p>${c.note}</p><p class="disclaimer">Educational information only. Not financial advice.</p>`; result.scrollIntoView({behavior:'smooth'});}
+function analyze(q){
+  if(used()>=MAX_FREE){
+    paywall.classList.remove('hidden');
+    return;
+  }
+
+  const key = aliases[q.toLowerCase().trim()];
+  const coin = data[key];
+
+  if(!coin){
+    result.className = 'result';
+    result.innerHTML = '<h2>Coin not found</h2><p>Try Bitcoin, Ethereum, Solana, PEPE, Dogecoin, XRP or Cardano.</p>';
+    return;
+  }
+
+  localStorage.setItem('used', used()+1);
+  updateRemaining();
+
+  const riskText = coin.risk || 'Medium Risk';
+  const score = riskText.includes('Low') ? 2 : riskText.includes('Medium') ? 5 : 8;
+  const level = riskText.includes('Low') ? 'Low Risk' : riskText.includes('Medium') ? 'Medium Risk' : 'High Risk';
+
+  result.className = 'result';
+  result.innerHTML = `
+    <h2>${coin.name} (${coin.symbol}) Risk Dashboard</h2>
+    <div class="risk-score">${score}/10</div>
+    <p><b>Risk Level:</b> ${level}</p>
+    <p><b>Liquidity:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
+    <p><b>Volatility:</b> ${score <= 3 ? 'Lower' : score <= 6 ? 'Medium' : 'High'}</p>
+    <p><b>Investor Note:</b> This is an educational risk overview, not financial advice.</p>
+  `;
+}
 btn.onclick=()=>analyze(input.value); input.addEventListener('keydown',e=>{if(e.key==='Enter')analyze(input.value)});
 ['Bitcoin','Ethereum','Solana','PEPE','Dogecoin','Chainlink'].forEach(x=>{const b=document.createElement('button');b.className='chip';b.textContent=x;b.onclick=()=>{input.value=x;analyze(x)};document.getElementById('chips').appendChild(b)});
 updateRemaining();

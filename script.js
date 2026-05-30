@@ -28,7 +28,33 @@ const data = {
   ]
 },
   ethereum:{name:'Ethereum',symbol:'ETH',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Ethereum powers the largest smart contract ecosystem and is widely used across crypto applications.',why:['Large developer ecosystem','Strong utility','High liquidity','Active development'],note:'Ethereum is well-known, but beginners should still understand that it can move sharply with the market.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Very High','Liquidity':'High','Sentiment Dependency':'Low'},risks:['Smart contract vulnerabilities','Layer-2 competition','Regulatory uncertainty']},
-  bnb:{name:'BNB',symbol:'BNB',risk:'Low Risk',cls:'low',stars:'★★★★☆',summary:'BNB has strong liquidity and multiple uses, but it is closely tied to the Binance ecosystem.',why:['High liquidity','Multiple ecosystem uses','Strong brand connection','Exchange ecosystem dependency'],note:'BNB may be easier to understand than small tokens, but beginners should know its dependency on Binance.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'High','Liquidity':'High','Sentiment Dependency':'Medium'}},
+  bnb:{
+  name:'BNB',
+  symbol:'BNB',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'BNB has strong utility inside the Binance ecosystem, but it carries regulatory and centralization risks.',
+  why:[
+    'Strong exchange ecosystem utility',
+    'High liquidity across major markets',
+    'Regulatory pressure around Binance',
+    'More centralized than Bitcoin or Ethereum'
+  ],
+  note:'BNB can be useful for fees and ecosystem access, but its risk is tied closely to Binance and regulatory developments.',
+  factors:{
+    'Project Maturity':'Strong',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Binance regulatory risk',
+    'Exchange dependency',
+    'Centralization risk'
+  ]
+},
   solana:{name:'Solana',symbol:'SOL',risk:'Medium Risk',cls:'medium',stars:'★★★★☆',summary:'Solana is a fast-growing blockchain with strong adoption, but it can be more volatile than Bitcoin or Ethereum.',why:['Active ecosystem','Fast growth','Higher volatility','Strong community interest'],note:'Solana can be beginner-friendly, but its price may move quickly during market stress.',factors:{'Project Maturity':'Good','Volatility':'Medium-High','Utility':'High','Liquidity':'High','Sentiment Dependency':'Medium'}},
   avalanche:{name:'Avalanche',symbol:'AVAX',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Avalanche has real technology and ecosystem activity, but it competes in a crowded blockchain market.',why:['Useful blockchain platform','Competitive market','Growth depends on adoption','Moderate volatility'],note:'Beginners should understand that strong technology does not remove market risk.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
   toncoin:{name:'Toncoin',symbol:'TON',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Toncoin has strong attention due to its Telegram ecosystem connection, but it is still developing.',why:['Fast growth','Telegram ecosystem attention','Still maturing','Market sentiment influence'],note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'Medium-High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},

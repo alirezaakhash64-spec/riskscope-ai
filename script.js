@@ -143,7 +143,33 @@ const data = {
   ]
 },
   shiba:{name:'Shiba Inu',symbol:'SHIB',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Shiba Inu is heavily influenced by community hype and meme-coin market cycles.',why:['Meme coin','High volatility','Hype-driven','Limited fundamentals'],note:'Beginners should be careful with assets that depend strongly on social media excitement.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low','Liquidity':'Medium-High','Sentiment Dependency':'High'}},
-  pepe:{name:'PEPE',symbol:'PEPE',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'PEPE is a meme-driven cryptocurrency with very high volatility and strong dependence on online trends.',why:['Meme-driven asset','Very high volatility','Social sentiment dependent','Limited long-term fundamentals'],note:'PEPE may experience rapid price swings. It is generally not beginner-friendly.',factors:{'Project Maturity':'Weak','Volatility':'Very High','Utility':'Low','Liquidity':'Medium','Sentiment Dependency':'Very High'}},
+  pepe:{
+  name:'PEPE',
+  symbol:'PEPE',
+  risk:'High Risk',
+  cls:'high',
+  stars:'★☆☆☆☆',
+  summary:'PEPE is a highly speculative meme coin with extreme volatility and strong dependence on market sentiment.',
+  why:[
+    'Strong meme-driven popularity',
+    'Large speculative trading volume',
+    'Limited real-world utility',
+    'Price heavily influenced by social sentiment'
+  ],
+  note:'PEPE can generate significant gains or losses in short periods and should be considered highly speculative.',
+  factors:{
+    'Project Maturity':'Low',
+    'Volatility':'Very High',
+    'Utility':'Low',
+    'Liquidity':'Medium',
+    'Sentiment Dependency':'Very High'
+  },
+  risks:[
+    'Extreme volatility',
+    'Speculative demand',
+    'Liquidity risk'
+  ]
+},
   floki:{name:'FLOKI',symbol:'FLOKI',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'FLOKI is a meme-related token with high dependence on community and trend cycles.',why:['Meme coin category','Trend-driven demand','High volatility','Uncertain long-term fundamentals'],note:'Beginners should understand that meme coins can rise and fall very quickly.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low-Medium','Liquidity':'Medium','Sentiment Dependency':'High'}},
   bonk:{name:'BONK',symbol:'BONK',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'BONK is a Solana ecosystem meme coin with high volatility and strong community-driven behavior.',why:['Meme coin','Solana ecosystem trend','High volatility','Sentiment-driven'],note:'BONK may be difficult for beginners because its value can depend heavily on market hype.',factors:{'Project Maturity':'Weak','Volatility':'Very High','Utility':'Low','Liquidity':'Medium','Sentiment Dependency':'High'}},
   xrp:{name:'XRP',symbol:'XRP',risk:'Medium Risk',cls:'medium',stars:'★★★★☆',summary:'XRP is an established crypto asset focused on payments, but it has unique regulatory and market risks.',why:['Long market history','Payment-focused use case','High liquidity','Regulatory sensitivity'],note:'XRP is well-known, but beginners should understand that regulations can affect market perception.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Medium-High','Liquidity':'High','Sentiment Dependency':'Medium'}},

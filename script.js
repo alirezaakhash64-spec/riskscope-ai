@@ -227,6 +227,14 @@ ${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major ris
 <ul>
 ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on overall risk profile</li>'}
 </ul>
+<p><b>Risk Breakdown:</b></p>
+<ul>
+  <li>Volatility: ${coin.breakdown?.volatility || 0}</li>
+  <li>Liquidity: ${coin.breakdown?.liquidity || 0}</li>
+  <li>Adoption: ${coin.breakdown?.adoption || 0}</li>
+  <li>Sentiment: ${coin.breakdown?.sentiment || 0}</li>
+  <li>Technology: ${coin.breakdown?.technology || 0}</li>
+</ul>
 <p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
 <p><b>Risk Trend:</b> ${score <= 3 ? 'Stable' : score <= 6 ? 'Moderate' : 'Aggressive'}</p>
 <p><b>Beginner Suitability:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>

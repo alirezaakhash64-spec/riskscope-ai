@@ -1,6 +1,32 @@
 const MAX_FREE = 50;
 const data = {
-  bitcoin:{name:'Bitcoin',symbol:'BTC',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Bitcoin has the longest market history, very high liquidity, and the strongest global adoption among cryptocurrencies.',why:['Oldest cryptocurrency','Very high liquidity','Strong global adoption','Lower risk than most crypto assets'],note:'Bitcoin is still volatile, but it is generally easier for beginners to understand than many smaller cryptocurrencies.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'High','Liquidity':'Very High','Sentiment Dependency':'Low'}},
+  bitcoin:{
+  name:'Bitcoin',
+  symbol:'BTC',
+  risk:'Low Risk',
+  cls:'low',
+  stars:'★★★★★',
+  summary:'Bitcoin has the longest market history, very high liquidity, and the strongest global adoption among cryptocurrencies.',
+  why:[
+    'Oldest cryptocurrency',
+    'Very high liquidity',
+    'Strong global adoption',
+    'Lower risk than most crypto assets'
+  ],
+  note:'Bitcoin is still volatile, but it is generally easier for beginners to understand than many smaller cryptocurrencies.',
+  factors:{
+    'Project Maturity':'Strong',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'Very High',
+    'Sentiment Dependency':'Low'
+  },
+  risks:[
+    'Regulatory uncertainty',
+    'ETF market concentration',
+    'Macro-economic sensitivity'
+  ]
+},
   ethereum:{name:'Ethereum',symbol:'ETH',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Ethereum powers the largest smart contract ecosystem and is widely used across crypto applications.',why:['Large developer ecosystem','Strong utility','High liquidity','Active development'],note:'Ethereum is well-known, but beginners should still understand that it can move sharply with the market.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Very High','Liquidity':'High','Sentiment Dependency':'Low'}},
   bnb:{name:'BNB',symbol:'BNB',risk:'Low Risk',cls:'low',stars:'★★★★☆',summary:'BNB has strong liquidity and multiple uses, but it is closely tied to the Binance ecosystem.',why:['High liquidity','Multiple ecosystem uses','Strong brand connection','Exchange ecosystem dependency'],note:'BNB may be easier to understand than small tokens, but beginners should know its dependency on Binance.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'High','Liquidity':'High','Sentiment Dependency':'Medium'}},
   solana:{name:'Solana',symbol:'SOL',risk:'Medium Risk',cls:'medium',stars:'★★★★☆',summary:'Solana is a fast-growing blockchain with strong adoption, but it can be more volatile than Bitcoin or Ethereum.',why:['Active ecosystem','Fast growth','Higher volatility','Strong community interest'],note:'Solana can be beginner-friendly, but its price may move quickly during market stress.',factors:{'Project Maturity':'Good','Volatility':'Medium-High','Utility':'High','Liquidity':'High','Sentiment Dependency':'Medium'}},
@@ -55,6 +81,10 @@ function analyze(q){
     <p><b>Liquidity:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
     <p><b>Volatility:</b> ${score <= 3 ? 'Lower' : score <= 6 ? 'Medium' : 'High'}</p>
     <p><b>Category:</b> ${coin.name === 'Bitcoin' ? 'Large Cap' : coin.name === 'Ethereum' ? 'Large Cap' : coin.name === 'PEPE' ? 'Meme Coin' : 'Mid Cap'}</p>
+    <p><b>Key Risks:</b></p>
+<ul>
+${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major risks identified</li>'}
+</ul>
 <p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
 <p><b>Risk Trend:</b> ${score <= 3 ? 'Stable' : score <= 6 ? 'Moderate' : 'Aggressive'}</p>
 <p><b>Beginner Suitability:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>

@@ -29,3 +29,31 @@ function analyze(q){if(used()>=MAX_FREE){result.classList.add('hidden');paywall.
 btn.onclick=()=>analyze(input.value); input.addEventListener('keydown',e=>{if(e.key==='Enter')analyze(input.value)});
 ['Bitcoin','Ethereum','Solana','PEPE','Dogecoin','Chainlink'].forEach(x=>{const b=document.createElement('button');b.className='chip';b.textContent=x;b.onclick=()=>{input.value=x;analyze(x)};document.getElementById('chips').appendChild(b)});
 updateRemaining();
+const waitlistForm = document.querySelector('.waitlist-form');
+
+if (waitlistForm) {
+  waitlistForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const emailInput = waitlistForm.querySelector('input[name="email"]');
+    const button = waitlistForm.querySelector('button');
+
+    button.textContent = 'Joining...';
+
+    try {
+      await fetch(waitlistForm.action, {
+        method: 'POST',
+        body: new FormData(waitlistForm),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      emailInput.value = '';
+      button.textContent = 'Joined ✅';
+    } catch (error) {
+      button.textContent = 'Try again';
+      alert('Something went wrong. Please try again.');
+    }
+  });
+}

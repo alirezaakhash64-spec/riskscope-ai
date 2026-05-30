@@ -50,9 +50,9 @@ if (waitlistForm) {
       });
 
       emailInput.value = '';
-      button.textContent = 'Joined ✅';
+      button.textContent = 'You’re on the list ✅';
     } catch (error) {
-      button.textContent = 'Try again';
+    button.textContent = 'Join Early Access';
       alert('Something went wrong. Please try again.');
     }
   });

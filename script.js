@@ -229,11 +229,11 @@ ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on 
 </ul>
 <p><b>Risk Breakdown:</b></p>
 <ul>
-  <li>Volatility: ${coin.breakdown?.volatility || 0}</li>
-  <li>Liquidity: ${coin.breakdown?.liquidity || 0}</li>
-  <li>Adoption: ${coin.breakdown?.adoption || 0}</li>
-  <li>Sentiment: ${coin.breakdown?.sentiment || 0}</li>
-  <li>Technology: ${coin.breakdown?.technology || 0}</li>
+ <li>Volatility: ${coin.breakdown?.volatility || 0}/20</li>
+<li>Liquidity: ${coin.breakdown?.liquidity || 0}/20</li>
+<li>Adoption: ${coin.breakdown?.adoption || 0}/20</li>
+<li>Sentiment: ${coin.breakdown?.sentiment || 0}/20</li>
+<li>Technology: ${coin.breakdown?.technology || 0}/20</li>
 </ul>
 <p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
 <p><b>Risk Trend:</b> ${score <= 3 ? 'Stable' : score <= 6 ? 'Moderate' : 'Aggressive'}</p>

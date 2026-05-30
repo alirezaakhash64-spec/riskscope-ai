@@ -88,7 +88,33 @@ const data = {
   near:{name:'NEAR Protocol',symbol:'NEAR',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'NEAR is a blockchain platform with solid technology, but adoption is smaller than the biggest networks.',why:['Strong technology','Smaller adoption','Competitive category','Moderate volatility'],note:'Beginners should compare NEAR with larger ecosystems before trying to understand it deeply.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'Medium','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
   arbitrum:{name:'Arbitrum',symbol:'ARB',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Arbitrum is an Ethereum Layer 2 project. It has real use, but the concept may be harder for beginners.',why:['Ethereum Layer 2 utility','Real ecosystem usage','Newer token','Technical learning curve'],note:'Arbitrum may be legitimate, but beginners may need to learn what Layer 2 networks are first.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
   optimism:{name:'Optimism',symbol:'OP',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Optimism helps scale Ethereum and has ecosystem usage, but it remains a developing project.',why:['Layer 2 use case','Ethereum ecosystem link','Growing adoption','Competition with other Layer 2s'],note:'Beginners should first understand Ethereum before trying to evaluate Optimism.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
-  chainlink:{name:'Chainlink',symbol:'LINK',risk:'Low Risk',cls:'low',stars:'★★★★☆',summary:'Chainlink provides oracle infrastructure used by many blockchain applications.',why:['Clear utility','Used by many projects','Established history','Less meme-driven'],note:'Chainlink is more utility-focused than hype-focused, but it still carries crypto market risk.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'High','Liquidity':'High','Sentiment Dependency':'Low'}},
+  chainlink:{
+  name:'Chainlink',
+  symbol:'LINK',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Chainlink is the leading oracle network but depends heavily on continued adoption across the crypto ecosystem.',
+  why:[
+    'Leading oracle infrastructure',
+    'Widely integrated across DeFi',
+    'Strong utility and demand',
+    'Growth depends on ecosystem adoption'
+  ],
+  note:'Chainlink plays a critical role in blockchain data delivery, but future growth depends on continued adoption.',
+  factors:{
+    'Project Maturity':'Strong',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Oracle competition',
+    'Adoption dependency',
+    'Smart contract risks'
+  ]
+},
   dogecoin:{name:'Dogecoin',symbol:'DOGE',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Dogecoin is a meme-based cryptocurrency with strong community attention and high sentiment dependency.',why:['Meme coin origin','Influenced by social media','High volatility','Limited fundamental utility'],note:'Dogecoin can move quickly based on online attention, which can be risky for beginners.',factors:{'Project Maturity':'Old','Volatility':'High','Utility':'Low-Medium','Liquidity':'High','Sentiment Dependency':'High'}},
   shiba:{name:'Shiba Inu',symbol:'SHIB',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Shiba Inu is heavily influenced by community hype and meme-coin market cycles.',why:['Meme coin','High volatility','Hype-driven','Limited fundamentals'],note:'Beginners should be careful with assets that depend strongly on social media excitement.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low','Liquidity':'Medium-High','Sentiment Dependency':'High'}},
   pepe:{name:'PEPE',symbol:'PEPE',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'PEPE is a meme-driven cryptocurrency with very high volatility and strong dependence on online trends.',why:['Meme-driven asset','Very high volatility','Social sentiment dependent','Limited long-term fundamentals'],note:'PEPE may experience rapid price swings. It is generally not beginner-friendly.',factors:{'Project Maturity':'Weak','Volatility':'Very High','Utility':'Low','Liquidity':'Medium','Sentiment Dependency':'Very High'}},

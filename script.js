@@ -230,6 +230,7 @@ breakdown:{
 };
 const aliases={btc:'bitcoin',bitcoin:'bitcoin',eth:'ethereum',ethereum:'ethereum',bnb:'bnb',sol:'solana',solana:'solana',avax:'avalanche',avalanche:'avalanche',ton:'toncoin',toncoin:'toncoin',matic:'polygon',pol:'polygon',polygon:'polygon',near:'near',arb:'arbitrum',arbitrum:'arbitrum',op:'optimism',optimism:'optimism',link:'chainlink',chainlink:'chainlink',doge:'dogecoin',dogecoin:'dogecoin',shib:'shiba',shiba:'shiba',pepe:'pepe',floki:'floki',bonk:'bonk',xrp:'xrp',ada:'cardano',cardano:'cardano',sui:'sui',uni:'uniswap',uniswap:'uniswap'};
 const input=document.getElementById('coinInput'), btn=document.getElementById('analyzeBtn'), result=document.getElementById('result'), paywall=document.getElementById('paywall'), remainingEl=document.getElementById('remaining');
+const suggestions = document.getElementById('suggestions');
 function used(){return Number(localStorage.getItem('rs_used')||0)}
 function updateRemaining(){remainingEl.textContent=Math.max(0,MAX_FREE-used())}
 function analyze(q){
@@ -313,6 +314,28 @@ ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on 
     <p><b>Investor Note:</b> This is an educational risk overview, not financial advice.</p>
   `;
 }
+input.addEventListener('input', () => {
+  const value = input.value.toLowerCase().trim();
+
+  if (!value) {
+    suggestions.innerHTML = '';
+    return;
+  }
+
+  const matches = Object.values(data)
+    .filter(c =>
+      c.name.toLowerCase().includes(value) ||
+      c.symbol.toLowerCase().includes(value)
+    )
+    .slice(0,5);
+
+  suggestions.innerHTML = matches.map(c => `
+    <div class="suggestion-item"
+      onclick="document.getElementById('coinInput').value='${c.name}';document.getElementById('suggestions').innerHTML=''">
+      ${c.name} (${c.symbol})
+    </div>
+  `).join('');
+});
 btn.onclick=()=>analyze(input.value); input.addEventListener('keydown',e=>{if(e.key==='Enter')analyze(input.value)});
 ['Bitcoin','Ethereum','Solana','PEPE','Dogecoin','Chainlink'].forEach(x=>{const b=document.createElement('button');b.className='chip';b.textContent=x;b.onclick=()=>{input.value=x;analyze(x)};document.getElementById('chips').appendChild(b)});
 updateRemaining();

@@ -62,6 +62,15 @@ breakdown:{
     'Exchange dependency',
     'Centralization risk'
   ]
+    ,
+
+breakdown:{
+  volatility:10,
+  liquidity:6,
+  adoption:8,
+  sentiment:9,
+  technology:7
+}
 },
   solana:{
   name:'Solana',
@@ -89,6 +98,15 @@ breakdown:{
     'Validator concentration',
     'Ecosystem dependency'
   ]
+    ,
+
+breakdown:{
+  volatility:12,
+  liquidity:7,
+  adoption:8,
+  sentiment:7,
+  technology:9
+}
 },
   avalanche:{name:'Avalanche',symbol:'AVAX',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Avalanche has real technology and ecosystem activity, but it competes in a crowded blockchain market.',why:['Useful blockchain platform','Competitive market','Growth depends on adoption','Moderate volatility'],note:'Beginners should understand that strong technology does not remove market risk.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
   toncoin:{name:'Toncoin',symbol:'TON',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Toncoin has strong attention due to its Telegram ecosystem connection, but it is still developing.',why:['Fast growth','Telegram ecosystem attention','Still maturing','Market sentiment influence'],note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'Medium-High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
@@ -109,6 +127,13 @@ breakdown:{
     'Strong utility and demand',
     'Growth depends on ecosystem adoption'
   ],
+    breakdown:{
+  volatility:8,
+  liquidity:8,
+  adoption:9,
+  sentiment:6,
+  technology:9
+},
   note:'Chainlink plays a critical role in blockchain data delivery, but future growth depends on continued adoption.',
   factors:{
     'Project Maturity':'Strong',

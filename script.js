@@ -228,38 +228,39 @@ ${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major ris
 ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on overall risk profile</li>'}
 </ul>
 <p><b>Risk Breakdown:</b></p>
+
 <div class="breakdown-item">
   <span>Volatility (${coin.breakdown?.volatility || 0}/20)</span>
   <div class="bar">
-    <div class="fill danger" style="width:${...}%"></div>
+    <div class="fill danger" style="width:${((coin.breakdown?.volatility || 0)/20)*100}%"></div>
   </div>
 </div>
 
 <div class="breakdown-item">
   <span>Liquidity (${coin.breakdown?.liquidity || 0}/20)</span>
   <div class="bar">
-    <div class="fill safe" style="width:${...}%"></div>
+    <div class="fill safe" style="width:${((coin.breakdown?.liquidity || 0)/20)*100}%"></div>
   </div>
 </div>
 
 <div class="breakdown-item">
   <span>Adoption (${coin.breakdown?.adoption || 0}/20)</span>
   <div class="bar">
-    <div class="fill safe" style="width:${...}%"></div>
+    <div class="fill safe" style="width:${((coin.breakdown?.adoption || 0)/20)*100}%"></div>
   </div>
 </div>
 
 <div class="breakdown-item">
   <span>Sentiment (${coin.breakdown?.sentiment || 0}/20)</span>
   <div class="bar">
-    <div class="fill warning" style="width:${...}%"></div>
+    <div class="fill warning" style="width:${((coin.breakdown?.sentiment || 0)/20)*100}%"></div>
   </div>
 </div>
 
 <div class="breakdown-item">
   <span>Technology (${coin.breakdown?.technology || 0}/20)</span>
   <div class="bar">
-  <div class="fill safe" style="width:${...}%"></div>
+    <div class="fill safe" style="width:${((coin.breakdown?.technology || 0)/20)*100}%"></div>
   </div>
 </div>
 <p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>

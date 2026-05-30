@@ -78,3 +78,25 @@
     background: #2563eb;
     transform: translateY(-2px);
 }
+.risk-badge{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  margin:12px 0 20px;
+}
+
+.low{
+  background:#0f5132;
+  color:#75ffb1;
+}
+
+.medium{
+  background:#664d03;
+  color:#ffd54a;
+}
+
+.high{
+  background:#5c1a1a;
+  color:#ff8a8a;
+}

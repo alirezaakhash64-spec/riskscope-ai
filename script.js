@@ -85,6 +85,10 @@ function analyze(q){
 <ul>
 ${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major risks identified</li>'}
 </ul>
+<p><b>Why This Rating?</b></p>
+<ul>
+${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on overall risk profile</li>'}
+</ul>
 <p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
 <p><b>Risk Trend:</b> ${score <= 3 ? 'Stable' : score <= 6 ? 'Moderate' : 'Aggressive'}</p>
 <p><b>Beginner Suitability:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>

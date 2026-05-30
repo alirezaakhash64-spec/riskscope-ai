@@ -115,7 +115,33 @@ const data = {
     'Smart contract risks'
   ]
 },
-  dogecoin:{name:'Dogecoin',symbol:'DOGE',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Dogecoin is a meme-based cryptocurrency with strong community attention and high sentiment dependency.',why:['Meme coin origin','Influenced by social media','High volatility','Limited fundamental utility'],note:'Dogecoin can move quickly based on online attention, which can be risky for beginners.',factors:{'Project Maturity':'Old','Volatility':'High','Utility':'Low-Medium','Liquidity':'High','Sentiment Dependency':'High'}},
+  dogecoin:{
+  name:'Dogecoin',
+  symbol:'DOGE',
+  risk:'High Risk',
+  cls:'high',
+  stars:'★★☆☆☆',
+  summary:'Dogecoin remains heavily influenced by social sentiment and celebrity attention despite its large community.',
+  why:[
+    'Strong community support',
+    'High market visibility',
+    'Limited utility compared to major chains',
+    'Highly sentiment-driven price action'
+  ],
+  note:'Dogecoin can experience large price swings based on social media trends and market sentiment.',
+  factors:{
+    'Project Maturity':'Medium',
+    'Volatility':'High',
+    'Utility':'Low',
+    'Liquidity':'High',
+    'Sentiment Dependency':'Very High'
+  },
+  risks:[
+    'Meme dependency',
+    'Whale concentration',
+    'Limited development activity'
+  ]
+},
   shiba:{name:'Shiba Inu',symbol:'SHIB',risk:'High Risk',cls:'high',stars:'★★☆☆☆',summary:'Shiba Inu is heavily influenced by community hype and meme-coin market cycles.',why:['Meme coin','High volatility','Hype-driven','Limited fundamentals'],note:'Beginners should be careful with assets that depend strongly on social media excitement.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low','Liquidity':'Medium-High','Sentiment Dependency':'High'}},
   pepe:{name:'PEPE',symbol:'PEPE',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'PEPE is a meme-driven cryptocurrency with very high volatility and strong dependence on online trends.',why:['Meme-driven asset','Very high volatility','Social sentiment dependent','Limited long-term fundamentals'],note:'PEPE may experience rapid price swings. It is generally not beginner-friendly.',factors:{'Project Maturity':'Weak','Volatility':'Very High','Utility':'Low','Liquidity':'Medium','Sentiment Dependency':'Very High'}},
   floki:{name:'FLOKI',symbol:'FLOKI',risk:'High Risk',cls:'high',stars:'★☆☆☆☆',summary:'FLOKI is a meme-related token with high dependence on community and trend cycles.',why:['Meme coin category','Trend-driven demand','High volatility','Uncertain long-term fundamentals'],note:'Beginners should understand that meme coins can rise and fall very quickly.',factors:{'Project Maturity':'Medium','Volatility':'High','Utility':'Low-Medium','Liquidity':'Medium','Sentiment Dependency':'High'}},

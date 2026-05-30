@@ -228,6 +228,7 @@ ${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major ris
 ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on overall risk profile</li>'}
 </ul>
 <p><b>Risk Breakdown:</b></p>
+<p>${JSON.stringify(coin.breakdown)}</p>
 <ul>
   <li>Volatility: ${coin.breakdown?.volatility || 0}</li>
   <li>Liquidity: ${coin.breakdown?.liquidity || 0}</li>

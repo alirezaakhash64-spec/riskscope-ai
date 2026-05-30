@@ -50,7 +50,7 @@ function analyze(q){
   result.className = 'result';
   result.innerHTML = `
     <h2>${coin.name} (${coin.symbol}) Risk Dashboard</h2>
-    <div class="risk-score">${score}/10</div>
+   <div class="risk-badge ${score <= 3 ? 'low' : score <= 6 ? 'medium' : 'high'}">${level} • ${score}/10</div>
     <p><b>Risk Level:</b> ${level}</p>
     <p><b>Liquidity:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
     <p><b>Volatility:</b> ${score <= 3 ? 'Lower' : score <= 6 ? 'Medium' : 'High'}</p>

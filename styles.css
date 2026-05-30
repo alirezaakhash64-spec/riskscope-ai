@@ -126,3 +126,14 @@
   background:linear-gradient(90deg,#00d4ff,#00ff88);
   transition:width .5s ease;
 }
+.fill.safe{
+  background:linear-gradient(90deg,#00d4ff,#00ff88);
+}
+
+.fill.warning{
+  background:linear-gradient(90deg,#ffd166,#ffb703);
+}
+
+.fill.danger{
+  background:linear-gradient(90deg,#ff4d6d,#ff0033);
+}

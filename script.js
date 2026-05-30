@@ -1,4 +1,4 @@
-const MAX_FREE = 5;
+const MAX_FREE = 50;
 const data = {
   bitcoin:{name:'Bitcoin',symbol:'BTC',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Bitcoin has the longest market history, very high liquidity, and the strongest global adoption among cryptocurrencies.',why:['Oldest cryptocurrency','Very high liquidity','Strong global adoption','Lower risk than most crypto assets'],note:'Bitcoin is still volatile, but it is generally easier for beginners to understand than many smaller cryptocurrencies.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'High','Liquidity':'Very High','Sentiment Dependency':'Low'}},
   ethereum:{name:'Ethereum',symbol:'ETH',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Ethereum powers the largest smart contract ecosystem and is widely used across crypto applications.',why:['Large developer ecosystem','Strong utility','High liquidity','Active development'],note:'Ethereum is well-known, but beginners should still understand that it can move sharply with the market.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Very High','Liquidity':'High','Sentiment Dependency':'Low'}},

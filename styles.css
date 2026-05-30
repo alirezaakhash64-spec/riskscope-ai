@@ -137,3 +137,25 @@
 .fill.danger{
   background:linear-gradient(90deg,#ff4d6d,#ff0033);
 }
+#suggestions{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.suggestion-item{
+  background:#07111f;
+  border:1px solid #1f3b63;
+  color:#e5e7eb;
+  padding:12px 14px;
+  border-radius:14px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  text-align:left;
+}
+
+.suggestion-item:hover{
+  background:#10233b;
+}

@@ -175,7 +175,40 @@ breakdown:{
     technology:9
   }
 },
-  toncoin:{name:'Toncoin',symbol:'TON',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Toncoin has strong attention due to its Telegram ecosystem connection, but it is still developing.',why:['Fast growth','Telegram ecosystem attention','Still maturing','Market sentiment influence'],note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'Medium-High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
+  toncoin:{
+  name:'Toncoin',
+  symbol:'TON',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Messaging-focused blockchain ecosystem leveraging Telegram adoption and user accessibility.',
+  why:[
+    'Fast growth',
+    'Telegram ecosystem attention',
+    'Still maturing',
+    'Market sentiment influence'
+  ],
+  note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',
+  factors:{
+    'Project Maturity':'Developing',
+    'Volatility':'Medium',
+    'Utility':'Medium-High',
+    'Liquidity':'Medium',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Ecosystem maturity risk',
+    'Telegram dependency',
+    'Market sentiment volatility'
+  ],
+  breakdown:{
+    volatility:10,
+    liquidity:8,
+    adoption:9,
+    sentiment:10,
+    technology:8
+  }
+},
   polygon:{name:'Polygon',symbol:'POL',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Polygon focuses on scaling Ethereum and has real utility, but faces strong competition.',why:['Ethereum scaling use case','Known ecosystem','High competition','Depends on network adoption'],note:'Polygon is easier to understand after learning the basics of Ethereum.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
   near:{name:'NEAR Protocol',symbol:'NEAR',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'NEAR is a blockchain platform with solid technology, but adoption is smaller than the biggest networks.',why:['Strong technology','Smaller adoption','Competitive category','Moderate volatility'],note:'Beginners should compare NEAR with larger ecosystems before trying to understand it deeply.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'Medium','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
   arbitrum:{name:'Arbitrum',symbol:'ARB',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Arbitrum is an Ethereum Layer 2 project. It has real use, but the concept may be harder for beginners.',why:['Ethereum Layer 2 utility','Real ecosystem usage','Newer token','Technical learning curve'],note:'Arbitrum may be legitimate, but beginners may need to learn what Layer 2 networks are first.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},

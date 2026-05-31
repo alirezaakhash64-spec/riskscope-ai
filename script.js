@@ -262,7 +262,6 @@ function analyze(q){
     <p><b>Risk Level:</b> ${level}</p>
     <p><b>Liquidity:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
     <p><b>Volatility:</b> ${score <= 3 ? 'Lower' : score <= 6 ? 'Medium' : 'High'}</p>
-    <p><b>Category:</b> ${coin.name === 'Bitcoin' ? 'Large Cap' : coin.name === 'Ethereum' ? 'Large Cap' : coin.name === 'PEPE' ? 'Meme Coin' : 'Mid Cap'}</p>
     <p><b>Key Risks:</b></p>
 <ul>
 ${coin.risks ? coin.risks.map(r => `<li>${r}</li>`).join('') : '<li>No major risks identified</li>'}

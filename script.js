@@ -339,7 +339,7 @@ ${coin.why ? coin.why.map(w => `<li>${w}</li>`).join('') : '<li>Rating based on 
     <div class="fill safe" style="width:${((coin.breakdown?.technology || 0)/20)*100}%"></div>
   </div>
 </div>
-<p><b>Market Tier:</b> ${score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
+<p><b>Market Tier:</b> ${coin.symbol === 'SOL' || coin.symbol === 'BNB' ? 'Large Cap' : score <= 3 ? 'Large Cap' : score <= 6 ? 'Mid Cap' : 'Speculative'}</p>
 <p><b>Risk Trend:</b> ${score <= 3 ? 'Stable' : score <= 6 ? 'Moderate' : 'Aggressive'}</p>
 <p><b>Beginner Suitability:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
 <p><b>Summary:</b> ${coin.name === 'Bitcoin' ? 'The most established cryptocurrency with strong network security and adoption.' : coin.name === 'Ethereum' ? 'Leading smart contract platform with broad ecosystem adoption.' : coin.name === 'PEPE' ? 'Highly speculative meme coin with elevated volatility risk.' : 'Crypto asset with moderate market and adoption risk.'}</p>

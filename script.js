@@ -28,11 +28,11 @@ const data = {
 ],
 
 breakdown:{
-  volatility:20,
-  liquidity:5,
-  adoption:5,
+  volatility:2,
+  liquidity:18,
+  adoption:18,
   sentiment:5,
-  technology:5
+  technology:18
 },
 },
   ethereum:{name:'Ethereum',symbol:'ETH',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Ethereum powers the largest smart contract ecosystem and is widely used across crypto applications.',why:['Large developer ecosystem','Strong utility','High liquidity','Active development'],note:'Ethereum is well-known, but beginners should still understand that it can move sharply with the market.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Very High','Liquidity':'High','Sentiment Dependency':'Low'},risks:['Smart contract vulnerabilities','Layer-2 competition','Regulatory uncertainty']},

@@ -597,3 +597,54 @@ if (waitlistForm) {
     }
   });
 }
+const portfolioInput = document.getElementById('portfolioInput');
+const portfolioBtn = document.getElementById('portfolioBtn');
+const portfolioResult = document.getElementById('portfolioResult');
+
+function analyzePortfolio() {
+  const raw = portfolioInput.value.trim();
+
+  if (!raw) {
+    portfolioResult.innerHTML = '<p>Please enter at least two crypto symbols.</p>';
+    return;
+  }
+
+  const symbols = raw
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  const coins = symbols
+    .map(symbol => data[aliases[symbol] || symbol])
+    .filter(Boolean);
+
+  if (coins.length < 2) {
+    portfolioResult.innerHTML = '<p>Please enter at least two supported coins, like BTC, ETH, SOL.</p>';
+    return;
+  }
+
+  const highRiskCount = coins.filter(c => c.risk === 'High Risk').length;
+  const mediumRiskCount = coins.filter(c => c.risk === 'Medium Risk').length;
+
+  let portfolioRisk = 'Low';
+  if (highRiskCount >= 2) portfolioRisk = 'High';
+  else if (highRiskCount === 1 || mediumRiskCount >= 2) portfolioRisk = 'Medium';
+
+  portfolioResult.innerHTML = `
+    <div class="result">
+      <h3>Portfolio Risk: ${portfolioRisk}</h3>
+      <p><b>Coins Analyzed:</b> ${coins.map(c => c.symbol).join(', ')}</p>
+      <p><b>Diversification:</b> ${coins.length >= 4 ? 'Good' : 'Basic'}</p>
+      <p><b>Risk Notes:</b></p>
+      <ul>
+        <li>${highRiskCount > 0 ? 'Contains high-risk assets' : 'No high-risk assets detected'}</li>
+        <li>${mediumRiskCount > 0 ? 'Includes medium-risk exposure' : 'Mostly lower-risk exposure'}</li>
+        <li>This is an educational overview, not financial advice.</li>
+      </ul>
+    </div>
+  `;
+}
+
+if (portfolioBtn) {
+  portfolioBtn.onclick = analyzePortfolio;
+}

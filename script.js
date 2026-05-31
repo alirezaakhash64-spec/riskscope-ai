@@ -615,8 +615,8 @@ function analyzePortfolio() {
     .filter(Boolean);
 
   const coins = symbols
-    .map(symbol => data[aliases[symbol] || symbol])
-    .filter(Boolean);
+  .map(symbol => data[aliases[symbol] || symbol])
+  .filter(Boolean);
 
   if (coins.length < 2) {
     portfolioResult.innerHTML = '<p>Please enter at least two supported coins, like BTC, ETH, SOL.</p>';

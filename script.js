@@ -75,7 +75,7 @@ breakdown:{
   risk:'Medium Risk',
   cls:'medium',
   stars:'★★★☆☆',
-  summary:'BNB has strong utility inside the Binance ecosystem, but it carries regulatory and centralization risks.',
+  summary:'Exchange-focused asset with strong liquidity and broad Binance ecosystem utility.',
   why:[
     'Strong exchange ecosystem utility',
     'High liquidity across major markets',
@@ -111,7 +111,7 @@ breakdown:{
   risk:'Medium Risk',
   cls:'medium',
   stars:'★★★☆☆',
-  summary:'Solana offers fast transactions and strong ecosystem growth but faces network reliability concerns.',
+  summary:'High-performance blockchain with strong ecosystem growth and developer adoption.',
   why:[
     'Rapid ecosystem growth',
     'Strong developer activity',
@@ -153,7 +153,7 @@ breakdown:{
   risk:'Medium Risk',
   cls:'medium',
   stars:'★★★☆☆',
-  summary:'Chainlink is the leading oracle network but depends heavily on continued adoption across the crypto ecosystem.',
+  summary:'Leading decentralized oracle network powering data infrastructure across DeFi.',
   why:[
     'Leading oracle infrastructure',
     'Widely integrated across DeFi',

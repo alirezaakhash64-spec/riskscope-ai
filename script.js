@@ -35,7 +35,40 @@ breakdown:{
   technology:18
 },
 },
-  ethereum:{name:'Ethereum',symbol:'ETH',risk:'Low Risk',cls:'low',stars:'★★★★★',summary:'Ethereum powers the largest smart contract ecosystem and is widely used across crypto applications.',why:['Large developer ecosystem','Strong utility','High liquidity','Active development'],note:'Ethereum is well-known, but beginners should still understand that it can move sharply with the market.',factors:{'Project Maturity':'Strong','Volatility':'Medium','Utility':'Very High','Liquidity':'High','Sentiment Dependency':'Low'},risks:['Smart contract vulnerabilities','Layer-2 competition','Regulatory uncertainty']},
+  ethereum:{
+  name:'Ethereum',
+  symbol:'ETH',
+  risk:'Low Risk',
+  cls:'low',
+  stars:'★★★★☆',
+  summary:'Leading smart contract platform with broad ecosystem adoption.',
+  why:[
+    'Large developer ecosystem',
+    'Strong utility',
+    'High liquidity',
+    'Active development'
+  ],
+  note:'Ethereum is widely used, but smart contract and Layer-2 risks still exist.',
+  factors:{
+    'Project Maturity':'Strong',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Smart contract vulnerabilities',
+    'Layer-2 competition',
+    'Regulatory uncertainty'
+  ],
+  breakdown:{
+    volatility:4,
+    liquidity:18,
+    adoption:19,
+    sentiment:15,
+    technology:18
+  }
+},
   bnb:{
   name:'BNB',
   symbol:'BNB',

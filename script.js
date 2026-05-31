@@ -141,7 +141,40 @@ breakdown:{
   technology:9
 }
 },
-  avalanche:{name:'Avalanche',symbol:'AVAX',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Avalanche has real technology and ecosystem activity, but it competes in a crowded blockchain market.',why:['Useful blockchain platform','Competitive market','Growth depends on adoption','Moderate volatility'],note:'Beginners should understand that strong technology does not remove market risk.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
+  avalanche:{
+  name:'Avalanche',
+  symbol:'AVAX',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Scalable smart contract platform focused on speed, low fees, and institutional blockchain adoption.',
+  why:[
+    'Useful blockchain platform',
+    'Competitive market',
+    'Growth depends on adoption',
+    'Moderate volatility'
+  ],
+  note:'Beginners should understand that strong technology does not remove market risk.',
+  factors:{
+    'Project Maturity':'Good',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'Medium-High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Competition from other smart contract platforms',
+    'Market volatility',
+    'Adoption uncertainty'
+  ],
+  breakdown:{
+    volatility:11,
+    liquidity:8,
+    adoption:8,
+    sentiment:6,
+    technology:9
+  }
+},
   toncoin:{name:'Toncoin',symbol:'TON',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Toncoin has strong attention due to its Telegram ecosystem connection, but it is still developing.',why:['Fast growth','Telegram ecosystem attention','Still maturing','Market sentiment influence'],note:'TON may be interesting, but beginners should understand it is less mature than Bitcoin or Ethereum.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'Medium-High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
   polygon:{name:'Polygon',symbol:'POL',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Polygon focuses on scaling Ethereum and has real utility, but faces strong competition.',why:['Ethereum scaling use case','Known ecosystem','High competition','Depends on network adoption'],note:'Polygon is easier to understand after learning the basics of Ethereum.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
   near:{name:'NEAR Protocol',symbol:'NEAR',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'NEAR is a blockchain platform with solid technology, but adoption is smaller than the biggest networks.',why:['Strong technology','Smaller adoption','Competitive category','Moderate volatility'],note:'Beginners should compare NEAR with larger ecosystems before trying to understand it deeply.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'Medium','Liquidity':'Medium','Sentiment Dependency':'Medium'}},

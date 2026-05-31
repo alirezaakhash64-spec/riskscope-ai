@@ -187,7 +187,7 @@ breakdown:{
   risk:'High Risk',
   cls:'high',
   stars:'★★☆☆☆',
-  summary:'Dogecoin remains heavily influenced by social sentiment and celebrity attention despite its large community.',
+ summary:'Community-driven cryptocurrency with strong brand recognition but limited utility beyond payments and speculation.',
   why:[
     'Strong community support',
     'High market visibility',
@@ -224,7 +224,7 @@ breakdown:{
   risk:'High Risk',
   cls:'high',
   stars:'★☆☆☆☆',
-  summary:'PEPE is a highly speculative meme coin with extreme volatility and strong dependence on market sentiment.',
+  summary:'Highly speculative meme coin driven by social sentiment, volatility, and short-term market attention.',
   why:[
     'Strong meme-driven popularity',
     'Large speculative trading volume',

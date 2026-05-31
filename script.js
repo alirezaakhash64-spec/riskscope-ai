@@ -209,10 +209,142 @@ breakdown:{
     technology:8
   }
 },
-  polygon:{name:'Polygon',symbol:'POL',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Polygon focuses on scaling Ethereum and has real utility, but faces strong competition.',why:['Ethereum scaling use case','Known ecosystem','High competition','Depends on network adoption'],note:'Polygon is easier to understand after learning the basics of Ethereum.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'High','Liquidity':'Medium-High','Sentiment Dependency':'Medium'}},
-  near:{name:'NEAR Protocol',symbol:'NEAR',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'NEAR is a blockchain platform with solid technology, but adoption is smaller than the biggest networks.',why:['Strong technology','Smaller adoption','Competitive category','Moderate volatility'],note:'Beginners should compare NEAR with larger ecosystems before trying to understand it deeply.',factors:{'Project Maturity':'Good','Volatility':'Medium','Utility':'Medium','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
-  arbitrum:{name:'Arbitrum',symbol:'ARB',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Arbitrum is an Ethereum Layer 2 project. It has real use, but the concept may be harder for beginners.',why:['Ethereum Layer 2 utility','Real ecosystem usage','Newer token','Technical learning curve'],note:'Arbitrum may be legitimate, but beginners may need to learn what Layer 2 networks are first.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
-  optimism:{name:'Optimism',symbol:'OP',risk:'Medium Risk',cls:'medium',stars:'★★★☆☆',summary:'Optimism helps scale Ethereum and has ecosystem usage, but it remains a developing project.',why:['Layer 2 use case','Ethereum ecosystem link','Growing adoption','Competition with other Layer 2s'],note:'Beginners should first understand Ethereum before trying to evaluate Optimism.',factors:{'Project Maturity':'Developing','Volatility':'Medium','Utility':'High','Liquidity':'Medium','Sentiment Dependency':'Medium'}},
+  polygon:{
+  name:'Polygon',
+  symbol:'POL',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Ethereum scaling network with strong real-world utility, but facing growing Layer-2 competition.',
+  why:[
+    'Ethereum scaling use case',
+    'Known ecosystem',
+    'High competition',
+    'Depends on network adoption'
+  ],
+  note:'Polygon is easier to understand after learning the basics of Ethereum.',
+  factors:{
+    'Project Maturity':'Good',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'Medium-High',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Layer-2 competition',
+    'Adoption dependency',
+    'Market volatility'
+  ],
+  breakdown:{
+    volatility:9,
+    liquidity:8,
+    adoption:8,
+    sentiment:6,
+    technology:9
+  }
+},
+  near:{
+  name:'NEAR Protocol',
+  symbol:'NEAR',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Developer-friendly blockchain focused on scalability, usability, and mainstream application adoption.',
+  why:[
+    'Strong technology',
+    'Smaller adoption',
+    'Competitive category',
+    'Moderate volatility'
+  ],
+  note:'Beginners should compare NEAR with larger ecosystems before trying to understand it deeply.',
+  factors:{
+    'Project Maturity':'Good',
+    'Volatility':'Medium',
+    'Utility':'Medium',
+    'Liquidity':'Medium',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Competitive Layer-1 market',
+    'Adoption uncertainty',
+    'Market volatility'
+  ],
+  breakdown:{
+    volatility:10,
+    liquidity:7,
+    adoption:7,
+    sentiment:6,
+    technology:9
+  }
+},
+  arbitrum:{
+  name:'Arbitrum',
+  symbol:'ARB',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Leading Ethereum Layer-2 network focused on scaling, lower fees, and expanding DeFi adoption.',
+  why:[
+    'Ethereum Layer 2 utility',
+    'Real ecosystem usage',
+    'Newer token',
+    'Technical learning curve'
+  ],
+  note:'Arbitrum may be legitimate, but beginners may need to learn what Layer 2 networks are first.',
+  factors:{
+    'Project Maturity':'Developing',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'Medium',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Layer-2 competition',
+    'Adoption dependency',
+    'Technical complexity'
+  ],
+  breakdown:{
+    volatility:9,
+    liquidity:8,
+    adoption:8,
+    sentiment:6,
+    technology:9
+  }
+},
+  optimism:{
+  name:'Optimism',
+  symbol:'OP',
+  risk:'Medium Risk',
+  cls:'medium',
+  stars:'★★★☆☆',
+  summary:'Ethereum Layer-2 network designed to reduce transaction costs and improve blockchain scalability.',
+  why:[
+    'Layer 2 use case',
+    'Ethereum ecosystem link',
+    'Growing adoption',
+    'Competition with other Layer 2s'
+  ],
+  note:'Beginners should first understand Ethereum before trying to evaluate Optimism.',
+  factors:{
+    'Project Maturity':'Developing',
+    'Volatility':'Medium',
+    'Utility':'High',
+    'Liquidity':'Medium',
+    'Sentiment Dependency':'Medium'
+  },
+  risks:[
+    'Layer-2 competition',
+    'Adoption dependency',
+    'Technical complexity'
+  ],
+  breakdown:{
+    volatility:9,
+    liquidity:8,
+    adoption:8,
+    sentiment:6,
+    technology:8
+  }
+},
   chainlink:{
   name:'Chainlink',
   symbol:'LINK',

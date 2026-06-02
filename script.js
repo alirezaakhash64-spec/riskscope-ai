@@ -513,7 +513,7 @@ const input=document.getElementById('coinInput'), btn=document.getElementById('a
 const suggestions = document.getElementById('suggestions');
 function used(){return Number(localStorage.getItem('rs_used')||0)}
 function updateRemaining(){remainingEl.textContent=Math.max(0,MAX_FREE-used())}
-function analyze(q){
+async function analyze(q){
   if(used()>=MAX_FREE){
     paywall.classList.remove('hidden');
     return;
@@ -521,7 +521,9 @@ function analyze(q){
 
   const key = aliases[q.toLowerCase().trim()];
   const coin = data[key];
-
+if (!coin.price) {
+  await fetchMarketData();
+}
   if(!coin){
     result.className = 'result';
     result.innerHTML = '<h2>Coin not found</h2><p>Try Bitcoin, Ethereum, Solana, PEPE, Dogecoin, XRP or Cardano.</p>';

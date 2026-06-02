@@ -700,4 +700,4 @@ function analyzePortfolio() {
 if (portfolioBtn) {
   portfolioBtn.onclick = analyzePortfolio;
 }
-fetchMarketData();
+window.addEventListener('load', fetchMarketData);

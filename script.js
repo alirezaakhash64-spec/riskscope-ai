@@ -709,3 +709,4 @@ function analyzePortfolio() {
 if (portfolioBtn) {
   portfolioBtn.onclick = analyzePortfolio;
 }
+fetchMarketData();

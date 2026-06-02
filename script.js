@@ -533,7 +533,9 @@ function analyze(q){
     result.innerHTML = '<h2>Coin not found</h2><p>Try Bitcoin, Ethereum, Solana, PEPE, Dogecoin, XRP or Cardano.</p>';
     return;
   }
-
+if (!coin.price) {
+  await fetchMarketData();
+}
   localStorage.setItem('used', used()+1);
   updateRemaining();
 

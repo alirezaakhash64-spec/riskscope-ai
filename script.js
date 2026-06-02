@@ -519,7 +519,7 @@ const input=document.getElementById('coinInput'), btn=document.getElementById('a
 const suggestions = document.getElementById('suggestions');
 function used(){return Number(localStorage.getItem('rs_used')||0)}
 function updateRemaining(){remainingEl.textContent=Math.max(0,MAX_FREE-used())}
-function analyze(q){
+async function analyze(q){
   if(used()>=MAX_FREE){
     paywall.classList.remove('hidden');
     return;

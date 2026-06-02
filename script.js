@@ -27,25 +27,31 @@ function percent(n) {
 }
 
 async function fetchMarketData() {
-  const ids = Object.values(coinGeckoIds).join(',');
-
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h`;
-
   try {
-    const res = await fetch(url);
-    const marketData = await res.json();
+    const prices = await Promise.all([
+      fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT').then(r => r.json()),
+      fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDT').then(r => r.json()),
+      fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDT').then(r => r.json())
+    ]);
 
-    marketData.forEach((coin) => {
-      const key = Object.keys(coinGeckoIds).find(k => coinGeckoIds[k] === coin.id);
+    const map = {
+      BTCUSDT: 'bitcoin',
+      ETHUSDT: 'ethereum',
+      SOLUSDT: 'solana'
+    };
+
+    prices.forEach((coin) => {
+      const key = map[coin.symbol];
 
       if (key && data[key]) {
-        data[key].price = coin.current_price;
-        data[key].marketCap = coin.market_cap;
-        data[key].change24h = coin.price_change_percentage_24h;
+        data[key].price = Number(coin.lastPrice);
+        data[key].change24h = Number(coin.priceChangePercent);
+        data[key].marketCap = null;
       }
     });
+
   } catch (err) {
-    console.error('CoinGecko error:', err);
+    console.error('Market data error:', err);
   }
 }
 const data = {

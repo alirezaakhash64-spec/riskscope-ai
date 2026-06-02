@@ -52,6 +52,9 @@ async function fetchMarketData() {
 
   } catch (err) {
     console.error('Market data error:', err);
+    alert('Market data error');
+alert(err.message);
+console.log(err);
   }
 }
 const data = {

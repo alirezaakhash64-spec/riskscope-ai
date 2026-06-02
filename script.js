@@ -36,21 +36,17 @@ fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=
 fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true').then(r => r.json())
     ]);
 
-    const map = {
-      BTCUSDT: 'bitcoin',
-      ETHUSDT: 'ethereum',
-      SOLUSDT: 'solana'
-    };
+    data.bitcoin.price = prices[0].bitcoin.usd;
+data.bitcoin.change24h = prices[0].bitcoin.usd_24h_change;
+data.bitcoin.marketCap = null;
 
-    prices.forEach((coin) => {
-      const key = map[coin.symbol];
+data.ethereum.price = prices[1].ethereum.usd;
+data.ethereum.change24h = prices[1].ethereum.usd_24h_change;
+data.ethereum.marketCap = null;
 
-      if (key && data[key]) {
-        data[key].price = Number(coin.lastPrice);
-        data[key].change24h = Number(coin.priceChangePercent);
-        data[key].marketCap = null;
-      }
-    });
+data.solana.price = prices[2].solana.usd;
+data.solana.change24h = prices[2].solana.usd_24h_change;
+data.solana.marketCap = null;
 
   } catch (err) {
     console.error('Market data error:', err);

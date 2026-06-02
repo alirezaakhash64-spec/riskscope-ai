@@ -1,4 +1,53 @@
 const MAX_FREE = 50;
+const coinGeckoIds = {
+  bitcoin: 'bitcoin',
+  ethereum: 'ethereum',
+  bnb: 'binancecoin',
+  solana: 'solana',
+  avalanche: 'avalanche-2',
+  toncoin: 'the-open-network',
+  polygon: 'matic-network',
+  near: 'near',
+  arbitrum: 'arbitrum',
+  optimism: 'optimism',
+  chainlink: 'chainlink',
+  dogecoin: 'dogecoin',
+  shiba: 'shiba-inu',
+  pepe: 'pepe'
+};
+
+function money(n) {
+  if (!n && n !== 0) return 'Loading...';
+  return '$' + Number(n).toLocaleString();
+}
+
+function percent(n) {
+  if (!n && n !== 0) return 'Loading...';
+  return `${Number(n).toFixed(2)}%`;
+}
+
+async function fetchMarketData() {
+  const ids = Object.values(coinGeckoIds).join(',');
+
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h`;
+
+  try {
+    const res = await fetch(url);
+    const marketData = await res.json();
+
+    marketData.forEach((coin) => {
+      const key = Object.keys(coinGeckoIds).find(k => coinGeckoIds[k] === coin.id);
+
+      if (key && data[key]) {
+        data[key].price = coin.current_price;
+        data[key].marketCap = coin.market_cap;
+        data[key].change24h = coin.price_change_percentage_24h;
+      }
+    });
+  } catch (err) {
+    console.error('CoinGecko error:', err);
+  }
+}
 const data = {
   bitcoin:{
   name:'Bitcoin',
@@ -491,6 +540,9 @@ function analyze(q){
     <h2>${coin.name} (${coin.symbol}) Risk Dashboard</h2>
    <div class="risk-badge ${score <= 3 ? 'low' : score <= 6 ? 'medium' : 'high'}">${level} • ${score}/10</div>
     <p><b>Risk Level:</b> ${level}</p>
+    <p><b>Live Price:</b> ${money(coin.price)}</p>
+<p><b>Market Cap:</b> ${money(coin.marketCap)}</p>
+<p><b>24h Change:</b> ${percent(coin.change24h)}</p>
     <p><b>Liquidity:</b> ${score <= 3 ? 'High' : score <= 6 ? 'Medium' : 'Low'}</p>
     <p><b>Volatility:</b> ${score <= 3 ? 'Lower' : score <= 6 ? 'Medium' : 'High'}</p>
     <p><b>Key Risks:</b></p>
@@ -648,3 +700,4 @@ function analyzePortfolio() {
 if (portfolioBtn) {
   portfolioBtn.onclick = analyzePortfolio;
 }
+fetchMarketData();

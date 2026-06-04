@@ -28,6 +28,7 @@ function percent(n) {
 
 async function fetchMarketData() {
   try {
+    alert('fetch started');
     const market = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_market_cap=true&include_24hr_change=true'
     ).then(r => r.json());

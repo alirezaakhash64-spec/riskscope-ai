@@ -28,31 +28,24 @@ function percent(n) {
 
 async function fetchMarketData() {
   try {
-    const prices = await Promise.all([
-      fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true').then(r => r.json()),
+    const market = await fetch(
+      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_market_cap=true&include_24hr_change=true'
+    ).then(r => r.json());
 
-fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true').then(r => r.json()),
+    data.bitcoin.price = market.bitcoin.usd;
+    data.bitcoin.change24h = market.bitcoin.usd_24h_change;
+    data.bitcoin.marketCap = market.bitcoin.usd_market_cap;
 
-fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true').then(r => r.json())
-    ]);
+    data.ethereum.price = market.ethereum.usd;
+    data.ethereum.change24h = market.ethereum.usd_24h_change;
+    data.ethereum.marketCap = market.ethereum.usd_market_cap;
 
-    data.bitcoin.price = prices[0].bitcoin.usd;
-data.bitcoin.change24h = prices[0].bitcoin.usd_24h_change;
-data.bitcoin.marketCap = null;
-
-data.ethereum.price = prices[1].ethereum.usd;
-data.ethereum.change24h = prices[1].ethereum.usd_24h_change;
-data.ethereum.marketCap = null;
-
-data.solana.price = prices[2].solana.usd;
-data.solana.change24h = prices[2].solana.usd_24h_change;
-data.solana.marketCap = null;
+    data.solana.price = market.solana.usd;
+    data.solana.change24h = market.solana.usd_24h_change;
+    data.solana.marketCap = market.solana.usd_market_cap;
 
   } catch (err) {
     console.error('Market data error:', err);
-    alert('Market data error');
-alert(err.message);
-console.log(err);
   }
 }
 const data = {

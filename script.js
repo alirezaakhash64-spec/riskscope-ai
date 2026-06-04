@@ -32,7 +32,7 @@ async function fetchMarketData() {
     const market = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_market_cap=true&include_24hr_change=true'
     ).then(r => r.json());
-
+alert(JSON.stringify(market));
     data.bitcoin.price = market.bitcoin.usd;
     data.bitcoin.change24h = market.bitcoin.usd_24h_change;
     data.bitcoin.marketCap = market.bitcoin.usd_market_cap;

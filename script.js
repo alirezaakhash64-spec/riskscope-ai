@@ -46,6 +46,7 @@ alert(JSON.stringify(market));
     data.solana.marketCap = market.solana.usd_market_cap;
 
   } catch (err) {
+    alert(err.message);
     console.error('Market data error:', err);
   }
 }
